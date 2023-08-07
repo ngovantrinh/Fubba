@@ -1,0 +1,127 @@
+.header{
+    .info_contact{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 33px 0 32px;
+        display: flex;
+        .header_right{
+            display: flex;
+            align-items: center;
+            column-gap: 25px;
+        }
+        .hotline{
+            display: flex;
+            align-items: center;
+            column-gap: 25px;
+            .contact_item{
+                display: flex;
+                align-items: center;
+                column-gap: 14px;
+                .icon_header{
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 5px;
+                    transition: 0.4s;
+                    background: #6fa2f7 url(../../assets/icon/call.svg) no-repeat center center/14px;
+                    cursor: pointer;
+                }
+            }
+            .contact_item:hover .icon_header{
+                background-color: #000;
+            }
+        }
+        .cart_box{
+            .contact_item{
+                display: flex;
+                align-items: center;
+                column-gap: 14px;
+                .cart_icon{
+                    position: relative;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 5px;
+                    transition: 0.4s;
+                    background: url(../../assets/icon/shopping-cart.svg) no-repeat center center/29px;
+                    cursor: pointer;
+                    .number_cart{
+                        position: absolute;
+                        top: -5px;
+                        left: 20px;
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        color: #fff;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 12px;
+                        font-weight: 700;
+                        letter-spacing: 0.7px;
+                        background: #6fa2f7;
+                        margin: 0 auto;
+                        left: 8px;
+                    }
+                }
+            }
+            .contact_item:hover .cart_icon{
+                background: url(../../assets/icon/shopping-cart-hover.svg)  no-repeat center center/29px;
+            }
+            .my_cart{
+                color: #000;
+                transition: 0.4s;
+            }
+            .contact_item:hover .cart_price .my_cart{
+                color: #6fa2f7;
+            }
+            .cart_price{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .feature_box{
+        border-top: 1px solid #ededed;
+        border-bottom: 1px solid #ededed;
+        background: #fff;
+        .header_feature{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .title_feature{
+                display: flex;
+                align-items: center;
+                column-gap: 44px;
+                list-style: none;
+    
+                color: #222;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 0;
+                text-transform: uppercase;
+                .item{
+                    display: inline-block;
+                    position: relative;
+                    padding: 21px 0 22px;
+                    .menu_hover{
+                        position: absolute;
+                        top: 160%;
+                        left: 0;
+                        opacity: 0;
+                        transition: 0.4s;
+                        width: 100px;
+                        height: 30px;
+                        background-color: #6fa2f7;
+                    }
+                    .active{
+                        top: 100%;
+                        opacity: 1;
+                        transition: 0.4s;
+                    }
+                }
+            }
+        }
+    }
+}
