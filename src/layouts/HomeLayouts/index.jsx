@@ -9,6 +9,7 @@ import InputSearch from "../../components/Input/InputSearch";
 function HomeLayouts() {
   const { t } = useTranslation();
   const [chairClass, setChairClass] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const changeLanguage = (e) => {
     const languageValue = e.target.value;
@@ -65,13 +66,21 @@ function HomeLayouts() {
           }`}
         >
           <ul className={styles.title_feature}>
-            <li className={`${styles.item} ${styles.chair}`}>
+            <li
+              className={`${styles.item} ${styles.chair}`}
+              onMouseEnter={() => setIsActive(true)}
+              onMouseLeave={() => setIsActive(false)}
+            >
               <p>{t("chair")}</p>
-              <div className={styles.menu_hover}>here</div>
+              <div
+                className={`${styles.menu_hover} ${isActive && styles.active}`}
+              >
+                here
+              </div>
             </li>
             <li className={`${styles.item} ${styles.dining_table}`}>
               {t("dining-table")}
-            </li> 
+            </li>
             <li className={`${styles.item}`}>{t("bed-room")}</li>
             <li className={`${styles.item}`}>{t("light-decor")}</li>
             <li className={`${styles.item}`}>{t("blog")}</li>
