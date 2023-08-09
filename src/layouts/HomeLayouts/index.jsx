@@ -17,80 +17,104 @@ function HomeLayouts() {
   };
 
   return (
-    <div className={styles.header}>
-      <select onChange={changeLanguage}>
-        <option value="eng">English</option>
-        <option value="vie">Vietnamese</option>
-      </select>
-      {/* <h3>{t("title")}</h3> */}
-      <div className={global.container}>
-        <div className={styles.info_contact}>
-          <div>
-            <img src={logo} alt="logo" />
-          </div>
-          <div className={styles.header_right}>
-            <div className={styles.hotline}>
-              <div className={styles.contact_item}>
-                <div className={styles.icon_header}></div>
-                <div>
-                  <p>HOTLINE</p>
-                  <p>+84344354894</p>
-                </div>
-              </div>
-              <div className={styles.contact_item}>
-                <div className={styles.icon_header}></div>
-                <div>
-                  <p>EMAIL</p>
-                  <p>trinh@gmail.com</p>
-                </div>
-              </div>
+    <div>
+      <div className={styles.header}>
+        <select onChange={changeLanguage}>
+          <option value="eng">English</option>
+          <option value="vie">Vietnamese</option>
+        </select>
+        {/* <h3>{t("title")}</h3> */}
+        <div className={global.container}>
+          <div className={styles.info_contact}>
+            <div>
+              <img src={logo} alt="logo" />
             </div>
-            <div className={styles.cart_box}>
-              <div className={styles.contact_item}>
-                <div className={styles.cart_icon}>
-                  <div className={styles.number_cart}>1</div>
+            <div className={styles.header_right}>
+              <div className={styles.hotline}>
+                <div className={styles.contact_item}>
+                  <div className={styles.icon_header}></div>
+                  <div>
+                    <p>HOTLINE</p>
+                    <p>+84344354894</p>
+                  </div>
                 </div>
-                <div className={styles.cart_price}>
-                  <p className={styles.my_cart}>My cart - </p>
-                  <p>$0.00</p>
+                <div className={styles.contact_item}>
+                  <div className={styles.icon_header}></div>
+                  <div>
+                    <p>EMAIL</p>
+                    <p>trinh@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.cart_box}>
+                <div className={styles.contact_item}>
+                  <div className={styles.cart_icon}>
+                    <div className={styles.number_cart}>1</div>
+                  </div>
+                  <div className={styles.cart_price}>
+                    <p className={styles.my_cart}>My cart - </p>
+                    <p>$0.00</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className={styles.feature_box}>
-        <div
-          className={`${global.container} ${styles.header_feature} ${
-            chairClass && styles.active
-          }`}
-        >
-          <ul className={styles.title_feature}>
-            <li
-              className={`${styles.item} ${styles.chair}`}
-              onMouseEnter={() => setIsActive(true)}
-              onMouseLeave={() => setIsActive(false)}
-            >
-              <p>{t("chair")}</p>
-              <div
-                className={`${styles.menu_hover} ${isActive && styles.active}`}
+        <div className={styles.feature_box}>
+          <div
+            className={`${global.container} ${styles.header_feature} ${
+              chairClass && styles.active
+            }`}
+          >
+            <ul className={styles.title_feature}>
+              <li
+                className={`${styles.item} ${styles.chair}`}
+                onMouseEnter={() => setIsActive(true)}
+                onMouseLeave={() => setIsActive(false)}
               >
-                here
+                <p>{t("chair")}</p>
+                <div
+                  className={`${styles.menu_hover} ${
+                    isActive && styles.active
+                  }`}
+                >
+                  here
+                </div>
+              </li>
+              <li className={`${styles.item} ${styles.dining_table}`}>
+                {t("dining-table")}
+              </li>
+              <li className={`${styles.item}`}>{t("bed-room")}</li>
+              <li className={`${styles.item}`}>{t("light-decor")}</li>
+              <li className={`${styles.item}`}>{t("blog")}</li>
+            </ul>
+            <div className={styles.search}>
+              <InputSearch />
+            </div>
+          </div>
+        </div>
+        <div className={styles.location_page}> </div>
+      </div>
+      <div className={styles.footer}>
+        <div className={styles.footer_container}>
+          <div className={global.container}>
+            <div className={styles.content}>
+              <div className={styles.block_footer}>
+                <p className={styles.title}>YOUR ACCOUNT</p>
+                <ul className={styles.option}>
+                  <li>info</li>
+                  <li>order</li>
+                  <li>asd</li>
+                  <li>adress</li>
+                  <li>voucher</li>
+                </ul>
               </div>
-            </li>
-            <li className={`${styles.item} ${styles.dining_table}`}>
-              {t("dining-table")}
-            </li>
-            <li className={`${styles.item}`}>{t("bed-room")}</li>
-            <li className={`${styles.item}`}>{t("light-decor")}</li>
-            <li className={`${styles.item}`}>{t("blog")}</li>
-          </ul>
-          <div className={styles.search}>
-            <InputSearch />
+              <div>here</div>
+              <div>here</div>
+            </div>
           </div>
         </div>
       </div>
-      <div className={styles.location_page}> </div>
     </div>
   );
 }

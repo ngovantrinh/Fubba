@@ -106,11 +106,13 @@
                     position: relative;
                     padding: 21px 0 22px;
                     cursor: pointer;
+                    transition: 0.3s;
                     .menu_hover{
                         position: absolute;
                         top: 160%;
                         left: 0;
                         opacity: 0;
+                        visibility: hidden;
                         transition: 0.4s;
                         width: 100px;
                         height: 30px;
@@ -120,7 +122,31 @@
                         top: 100%;
                         opacity: 1;
                         transition: 0.4s;
+                        visibility: initial;
                     }
+                }
+                .item:hover{
+                    color: #6fa2f7;
+                }
+            }
+        }
+    }
+}
+.footer{
+    .footer_container{
+        .content{
+            display: flex;
+            .block_footer{
+                .title{
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: uppercase !important;
+                    letter-spacing: 0.25px;
+                    color: #000;
+                    margin: 0 0 20px;
+                }
+                .option{
+                    list-style: none;
                 }
             }
         }
