@@ -5,6 +5,7 @@ import global from "../../App.module.scss";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 import InputSearch from "../../components/Input/InputSearch";
+import { Outlet } from "react-router";
 
 function HomeLayouts() {
   const { t } = useTranslation();
@@ -95,6 +96,7 @@ function HomeLayouts() {
         </div>
         <div className={styles.location_page}> </div>
       </div>
+      <Outlet></Outlet>
       <div className={styles.footer}>
         <div className={styles.footer_container}>
           <div className={global.container}>
