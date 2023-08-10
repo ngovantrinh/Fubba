@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import logo from "../../assets/images/logo.jpg";
 import styles from "./index.module.scss";
 import global from "../../App.module.scss";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 import InputSearch from "../../components/Input/InputSearch";
-import { Outlet } from "react-router";
+import { Outlet, Link } from "react-router-dom";
 
 function HomeLayouts() {
   const { t } = useTranslation();
@@ -104,11 +104,14 @@ function HomeLayouts() {
               <div className={styles.block_footer}>
                 <p className={styles.title}>YOUR ACCOUNT</p>
                 <ul className={styles.option}>
-                  <li>info</li>
+                  <li>
+                    <Link to={{ pathname: "/" }}>info</Link>
+                  </li>
+                  <li>
+                    <Link to={{ pathname: "/about" }}>ddddd</Link>
+                  </li>
                   <li>order</li>
                   <li>asd</li>
-                  <li>adress</li>
-                  <li>voucher</li>
                 </ul>
               </div>
               <div>here</div>
